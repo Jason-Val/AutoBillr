@@ -19,4 +19,5 @@ urlpatterns = [
     path('profile/groupinfo',TemplateView.as_view(template_name='groupinfo.html'), name='groupinfo'),
     path('profile/createbill',TemplateView.as_view(template_name='createbill.html'),name='createbill'),
     path('admin/', admin.site.urls),
+    path('about/', hello.views.about, name='about'),
 ]
