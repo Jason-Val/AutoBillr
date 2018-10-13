@@ -1,5 +1,6 @@
 from django.conf.urls import include, url
 from django.urls import path
+from django.views.generic.base import TemplateView
 
 from django.contrib import admin
 admin.autodiscover()
@@ -13,5 +14,6 @@ import hello.views
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
+    path('profile/',TemplateView.as_view(template_name='profile.html'), name='profile'),
     path('admin/', admin.site.urls),
 ]
