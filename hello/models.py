@@ -2,9 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import random
+import string
 
 @receiver(post_save, sender=User)
-def create_user_profiel(sender, instance, created, **kwargs):
+def create_user_profile(sender, instance, created, **kwargs):
 	if created:
 		Profile.objects.create(user=instance)
 
@@ -12,11 +14,18 @@ def create_user_profiel(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
 	instance.profile.save()
 
+def make_password(self):
+	symbols = ['*', '!', '#', '%', '^', '&']
+	pwd = ""
+	options = string.letters + "!@#$%^&*()"
+	for i in range(15):
+		pwd += random.choice(options)
+	return pwd + "aA*"
 
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	name = models.CharField(max_length=50)
-	email = models.CharField(max_length=50)
+	obp_pwd = models.CharField(max_length=16, default=make_password)
+
 
 class BillPayer(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)

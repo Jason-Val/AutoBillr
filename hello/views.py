@@ -13,4 +13,3 @@ def about(request):
 def db(request):
 
     return render(request, 'db.html', {})
-
