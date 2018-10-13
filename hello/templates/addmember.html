@@ -1,3 +1,5 @@
+
+
 {% extends "base.html" %}
 {% load staticfiles %}
 
@@ -10,23 +12,18 @@
     <p>create a new bill here</p>
     <hr>
 
-    <b>Name of the Bill</b>
-    <input type="text" style="color:black" placeholder="Enter Name" required>
-    <p> </p>
-    <b>Bill Amount</b>
-    <input type="bill_amount" style="color:black" placeholder="Bill Amount"required>
+    <b>Add Member </b>
+    <input type="text" placeholder="enter Email" required>
+    <b>Percentage </b>
+    <input type="text" placeholder="percent of the bill" required>
+    <button style="color:black"> Add another member </button>
     <p></p>
-
-    <b>Interval by Days </b>
-    <input type="text" style="color:black" placeholder="How often to pay" required>
-    <p></p>
-    <button style="color:black"> Next </button>
+    <button style="color:black"> Submit </button>
     <hr>
 
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
     <button type="submit" style="color:black" class="registerbtn">Register</button>
   </div>
-
   <div class="container signin">
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>

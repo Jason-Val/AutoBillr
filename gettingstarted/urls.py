@@ -18,5 +18,6 @@ urlpatterns = [
     path('register/',TemplateView.as_view(template_name='register.html'), name='register'),
     path('profile/groupinfo',TemplateView.as_view(template_name='groupinfo.html'), name='groupinfo'),
     path('profile/createbill',TemplateView.as_view(template_name='createbill.html'),name='createbill'),
+    path('profile/addmember',TemplateView.as_view(template_name='addmember.html'),name='addmember'),
     path('admin/', admin.site.urls),
 ]
