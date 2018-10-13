@@ -14,6 +14,7 @@ import hello.views
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     path('profile/',TemplateView.as_view(template_name='profile.html'), name='profile'),
     path('admin/', admin.site.urls),
 ]
