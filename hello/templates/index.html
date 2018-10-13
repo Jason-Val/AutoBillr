@@ -8,9 +8,32 @@
     <a href="/" class="chicken-logo">
       <img src="{% static 'chicken-House.png'%}">
     </a>
-    <h1>Welcome to HouseShare</h1>
+    <h1>Welcome to AutoBillr</h1>
     <p>Automatic bill splitting for house mates</p>
-    <a type="button" class="btn btn-lg btn-default" href="/profile/" %}><span class="glyphicon glyphicon-flash"></span> Login</a>
+    <div class="container">
+  <form action="profile/">
+    <div class="row">
+      <div class="vl">
+      </div>
+      <div class="col">
+
+        <input style='color:black' type="text" name="username" placeholder="Username" required>
+        <input style='color:black' type="password" name="password" placeholder="Password" required>
+        <input type="submit" style="color:black" value="Login" class="btn">
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="register/" style="background-color:white " class="btn">Sign up</a>
+    </div>
+  </div>
+</div>
+
   </div>
 </div>
 

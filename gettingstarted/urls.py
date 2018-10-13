@@ -15,5 +15,8 @@ urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
     path('profile/',TemplateView.as_view(template_name='profile.html'), name='profile'),
+    path('register/',TemplateView.as_view(template_name='register.html'), name='register'),
+    path('profile/groupinfo',TemplateView.as_view(template_name='groupinfo.html'), name='groupinfo'),
+    path('profile/createbill',TemplateView.as_view(template_name='createbill.html'),name='createbill'),
     path('admin/', admin.site.urls),
 ]
