@@ -9,7 +9,7 @@ def getBill(request):
         if(form.is_valid()):
             return HttpResponseRedirect('/addmember/')
     else:
-        form = NameForm()
+        form = BillCreationForm()
 
     return render(request, 'profile.html', {'form': form})
 
