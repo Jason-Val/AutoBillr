@@ -4,28 +4,29 @@
 {% block content %}
 
 <div class="jumbotron text-center">
-  <form action="addmember">
-  <div class="container">
-    <h1>AutoBillr</h1>
-    <p>create a new bill here</p>
-    <hr>
+    <form action="addmember" method="post">
+      {% csrf_token %}
+      <div class="container">
+        <h1>AutoBillr</h1>
+        <p>create a new bill here</p>
+        <hr>
 
-    <b>Name of the Bill</b>
-    <input type="text" style="color:black" placeholder="Enter Name" required>
-    <p> </p>
-    <b>Bill Amount</b>
-    <input type="bill_amount" style="color:black" placeholder="Bill Amount"required>
-    <p></p>
+        <b>Name of the Bill</b>
+        <input type="text" style="color:black" value="{{ billName }}" placeholder="Enter Name" required>
+        <p> </p>
+        <b>Bill Amount</b>
+        <input type="bill_amount" style="color:black" value="{{ billAmount }}" placeholder="Bill Amount"required>
+        <p></p>
 
-    <b>Interval by Days </b>
-    <input type="text" style="color:black" placeholder="How often to pay" required>
-    <p></p>
-    <button style="color:black"> Next </button>
-    <hr>
+        <b>Interval by Days </b>
+        <input type="text" style="color:black" value="{{ billInterval }}" placeholder="How often to pay" required>
+        <p></p>
+        <button style="color:black"> Next </button>
+        <hr>
 
-  </div>
+      </div>
 
-</form>
+    </form>
 </div>
 
 {% endblock %}
