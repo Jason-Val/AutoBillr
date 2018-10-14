@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="chicken-logo">
+      <img src="{% static 'chicken-House.png'%}">
+    </a>
+    <h1>Welcome to AutoBillr</h1>
+    <p>Automatic bill splitting for house mates</p>
+    <div class="container">
+    Have you ever experienced to split bill periodically? This is the solution for you!
+    We can help you set up to split bills among your friends.
+    It automizes the bill paying for you every month so you don't have to worry about it at all. 
+
+  </div>
+</div>
+
+{% endblock %}

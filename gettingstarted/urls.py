@@ -19,5 +19,7 @@ urlpatterns = [
     path('profile/groupinfo',TemplateView.as_view(template_name='groupinfo.html'), name='groupinfo'),
     path('profile/createbill',TemplateView.as_view(template_name='createbill.html'),name='createbill'),
     path('profile/addmember',TemplateView.as_view(template_name='addmember.html'),name='addmember'),
+    path('profile/billinfo',TemplateView.as_view(template_name='billinfo.html'),name='billinfo'),
+    path('aboutus',TemplateView.as_view(template_name='aboutus.html'),name='aboutus'),
     path('admin/', admin.site.urls),
 ]
